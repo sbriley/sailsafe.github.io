@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title id="title">SailSafe</title>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"/> -->
+    <!-- Optional theme -->
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top header-footer">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-weight: bold">SailSafe</a>
+             <div style="font-style: italic; color: white;">EECS 349 Machine Learning Spring 2018 - Susan Riley - Northwestern University</div>
+            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="abstract.html">Abstract</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+
+        <div id="home-content">
+            <header>
+                <div class="carousel-item active non-home" style="background-image: url(images/fjs.jpg)">
+                    <div class="carousel-caption d-none d-md-block" style=" margin-bottom: 30px; padding: 20px 0px;">
+                        <!-- <p style="font-size: 30px;">The world's best way to help and be helped by your community.</p> -->
+                    </div>
+                </div>
+            </header>
+            <div class="container" style="width: 60%">
+                <p> <h2> Report </h2>
+
+
+                </p>
+
+                <div class="container" style="width: 80%">
+                    <h5> Features </h5>
+                    <p>
+                        Typically, the factors that coaches and captains will consider
+                        when deciding if they will hold practice are:
+                        <ul>
+                            <li> <b>Windspeed and maximum wind gusts.</b> Is the wind too
+                                strong? Will it be safe to send boats out and still
+                                sail safely? Alternatively, is there enough wind to
+                                sail at all?
+                            </li>
+                            <li>
+                                <b>Wind direction.</b> Wind from the North is denser
+                                and colder than wind from the south, so practice might be cancelled
+                                at windspeeds from the North that are sailable from the South.
+                            </li>
+                            <li>
+                                <b>Air temperature. </b> Cold conditions can make it
+                                simply too dangerous to sail. Schools in areas that
+                                experience winter will cancel practice for all of the
+                                winter season, but may also need to consider one-off days
+                                that are also too cold.
+                            </li>
+                            <li>
+                                <b> Visibility. </b> When it is too cloudy, it is
+                                unsafe to sail away from shore. A small amount of
+                                fog is not unsafe, but if it gets to a point where
+                                the sailor can no longer see shore, they may be
+                                in danger of getting lost, in which case practice
+                                must be cancelled.
+                            </li>
+                            <li>
+                                <b> Precipitation. </b> While it is not unsafe to sail
+                                in the rain, precipitation can sometimes indicate
+                                whether or not practice should be held. Depending on the
+                                air temperature, it might be okay to sail without
+                                getting wet, but could be unsafe and too cold if
+                                it is raining.
+                            </li>
+                            <li>
+                                <b> Storm Status. </b> Although precipitation would
+                                not on its own prevent the team from practicing,
+                                thunderstorms make sailing entirely dangerous, and
+                                practice should be cancelled any time a thunderstorm
+                                is in the area.
+                            </li>
+                        </ul>
+                        In addition to these weather considerations, whether or not
+                        a coach feels safe running practice may vary from person to person.
+                        I collected all the above data to train my model for practice days
+                        from Spring 2015 to May 2018, including who was coaching each
+                        day and whether or not the team had an <b> On The Water </b>
+                        practice or a <b> Chalk Talk </b>, which is the term used for
+                        an on-land sailing discussion.
+                    </p>
+                    <h5> Data Sources </h5>
+                    <p>
+                        The data was acquired from three different sources.
+                        The coaching and practice data was acquired from the NU
+                        Sailing Team practice records. These are dated from March of 2015
+                        to May of 2018, for a total of 198 records. The windspeed,
+                        air temperature, and wind direction data was scraped for each
+                        date from the <a href="https://www.glerl.noaa.gov//metdata/chi/">Great Lakes Environmental Research Laboratory
+                        archives</a>, while the visiblity and precipitation data was
+                        scraped from <a href="https://www.wunderground.com"> Wunderground.com's </a>
+                        data archives. Finally, storm status was manually collected
+                        from <a href="https://www.timeanddate.com/weather/usa/evanston/historic">
+                        timeanddate.com's </a> Evanston history. A python script was used
+                        to collect all this data into a .arff file appropriate for Weka.
+                    </p>
+                    <p> The python script can be <a class="pagelinks" href="downloadable_files/weather_data_collection.py"
+                        download = "weather_data_collection.py">
+                        downloaded here. </a>
+                    </p>
+                    <p>
+                        The .arff file produced from this script
+                        and used in Weka training can be <a class="pagelinks" href="downloadable_files/nustdata.arff"
+                        download = "nustdata.arff"> downloaded here. </a>
+                    </p>
+                    <h5> Model Training and Results </h5>
+                    <p> After experimenting with many different Weka models informally,
+                        the Logistic, Perceptron, J48, and Random Forest models
+                        were those that performed notably better than ZeroR, which
+                        had a percent accuracy of <b>80.3030 %</b>. For these models,
+                        I removed certain features that might have been less important.
+                        After comparing percent accuracies for different combinations
+                        of features, the Random Forest model with the features: <i>
+                        Windspeed, Wind gust, Wind direction, Visibility, Precipitation, and
+                        Storm Status </i> was the most accurate, with a percent accuracy
+                        of <b>90.4040 %</b> as seen in the table below.
+                    <p>
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th> </th>
+                                    <th> Logistic </th>
+                                    <th> Perceptron </th>
+                                    <th> J48 </th>
+                                    <th> <i>Random Forest</i> </th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td> All Features </td>
+                                    <td> 86.8687 </td>
+                                    <td> 85.3535 </td>
+                                    <td> 83.8384 </td>
+                                    <td> 89.3939 </td>
+                                </tr>
+                                <tr>
+                                    <td> Coach Excluded </td>
+                                    <td> 86.8687 </td>
+                                    <td> 87.3737 </td>
+                                    <td> 81.8182 </td>
+                                    <td> 89.3939 </td>
+                                </tr>
+                                <tr>
+                                    <td> <b><i>Coach and Airtemp Excluded</i> </b></td>
+                                    <td> 87.3737 </td>
+                                    <td> 86.8687 </td>
+                                    <td> 82.3232 </td>
+                                    <td> <b><i>90.4040</i></b> </td>
+                                </tr>
+                                <tr>
+                                    <td> Coach, Wind Direction, and Airtemp Excluded </td>
+                                    <td> 86.8687 </td>
+                                    <td> 85.3535 </td>
+                                    <td> 84.8485 </td>
+                                    <td> 82.3232 </td>
+                                </tr>
+                                <tr>
+                                    <td> Precipitation Excluded </td>
+                                    <td> 86.3636 </td>
+                                    <td> 87.3737 </td>
+                                    <td> 84.3434 </td>
+                                    <td> 88.3838 </td>
+                                </tr>
+                                <tr>
+                                    <td> Precipitation and Coach Excluded </td>
+                                    <td> 86.8687 </td>
+                                    <td> 87.3737 </td>
+                                    <td> 82.8283 </td>
+                                    <td> 88.3838 </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </p>
+
+                    <p> That the model was able to improve by 10 percent over such a high ZeroR
+                        indicates that a predictive model is useful and feasible to determine
+                        whether or not the conditions allow for sailing. Despite this,
+                        I believe the model could be greatly benefitted by more data. Because
+                        the data available was only limited to the past four years, the amount
+                        of data was enough to train a crude model, but more data would definitely
+                        help to refine this model.
+                    </p>
+                    <p> It makes sense that the Random Forest performed so well, because
+                        even from a human perspective, choosing whether or not to hold practices
+                        operates simlarly to a decision tree. Certain features, such as
+                        windspeed are the most definitive factors, but certain factors can
+                        make or break a practice.
+                    </p>
+
+
+                    <h5> Future Work </h5>
+                    <p>
+                        As previously mentioned in order to expand this model to more accurately and
+                        predict whether or not a team should go sailing, first and foremost
+                        more data is necessary. Practice Records for the Northwestern University Sailing
+                        Team only go back to the Spring of 2015. In order for meaningful
+                        analysis to be done, team leaders will need to continue to dutifully record
+                        data. In some cases, chalk talks have been favored over On The Water
+                        practices when a coach was injured during activites outside
+                        of practice. At the beginning of the year, practices were
+                        assigned as chalk talks to educate new team members and go through
+                        safety and onboarding trainings. These examples are independent
+                        of the conditions, and, without record of these chalk talks and
+                        their reasons, the model cannot be accurately trained.
+
+
+                    </p>
+                    <p>
+                        Beyond the NU sailing team, it could be useful to collect data
+                        from other locations and other schools. While different teams may have
+                        different abilities, similar teams could be matched to expand the
+                        database of practice records. One of the challenges here is that
+                        teams are often student run and do not keep thorough records of
+                        their practices.
+                    </p>
+                    <p>
+                        Finally, this data could be used to actually create a practice
+                        predictor or advisor. It would be useful for coaches and captains
+                        to seek "advice" from past practices, and use their own decisions,
+                        as well as those who came before them, as precident.
+                    </p>
+                    <h5> Concluding Thoughts </h5>
+                    <p>
+                        Overall, it was interesting to work on this project and see how
+                        something that I focus a lot of my extra-curricular time on
+                        could be predicted and enhanced by machine learning techniques.
+                        It is easy to see that with enough data, Machine Learning techniques
+                        can, at the very least, help humans make more informed decisions.
+                        Even if machine learning models don't replace human decision
+                        making, they can act to enhance human cognition.
+                    </p>
+                    <p> The lack of data over time also provided a motivation for
+                        taking and storing data well. While machine learning techniques
+                        may change and advance to better suit more specific applicaitons,
+                        without the data they cannot be used to their full potential.
+                        Data collection and management becomes the foundation of
+                        future machine learning applications.
+                    </p>
+
+
+            </div>
+        </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 header-footer">
+        <div class="container">
+            <p class="m-0 text-center text-white"><a style="color: white" href="mailto:susieriley@u.northwestern.edu"> susieriley@u.northwestern.edu</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+<!-- scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>

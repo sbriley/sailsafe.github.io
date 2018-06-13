@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+
+    <title id="title">SailSafe</title>
+
+    <!-- Latest compiled and minified Bootstrap CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/modern-business.css" rel="stylesheet">
+    <link href="css/simple-sidebar.css" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+
+
+    <!-- <link rel="stylesheet" type="text/css" href="style.css"/> -->
+    <!-- Optional theme -->
+
+    <!-- Latest compiled and minified Bootstrap JavaScript -->
+    <!-- <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script> -->
+
+</head>
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg navbar-dark fixed-top header-footer">
+        <div class="container">
+            <a class="navbar-brand" href="index.html" style="font-weight: bold">SailSafe</a>
+             <div style="font-style: italic; color: white;">EECS 349 Machine Learning Spring 2018 - Susan Riley - Northwestern University</div>
+            <!-- <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button> -->
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="abstract.html">Abstract</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="report.html">Report</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="main">
+
+        <div>
+            <header>
+                <div class="carousel-item active non-home" style="background-image: url(images/fjs.jpg)">
+                    <div class="carousel-caption d-none d-md-block" style=" margin-bottom: 30px; padding: 20px 0px;">
+                        <!-- <p style="font-size: 30px;">The world's best way to help and be helped by your community.</p> -->
+                    </div>
+                </div>
+            </header>
+            <div class="container" style="width: 60%">
+                <p> <h2> Abstract </h2>
+
+
+                </p>
+
+                <div class="container" style="width: 80%">
+                    <p>
+                        Unlike most sports, college sailing is highly dependent on conditions.
+                        Entire weekends of racing might get cancelled due to a persistent
+                        thunderstorm or a lack of wind. Even when not competing, team captains
+                        and coaches must assess whether the conditions allow for a safe and
+                        productive practice.
+                    </p>
+                    <p>
+                        While these individuals are qualified to make these decisions,
+                        it can be helful for team members to plan ahead, or for team leaders
+                        to have additional guidance in making the decision based on precedence.
+                        After all, every team chooses to sail in different conditions depending
+                        on their team's ability level, so while there is no universal
+                        guideline on whether or not it is permissible to sail, decisions
+                        for a specific team are often based on precedence.
+                    </p>
+                    <p>
+                        With enough data, a machine learning model can be used to inform
+                        and enhance these decisions. I acquired practice data for the
+                        Northwestern University Sailing Team over the past 4 years and
+                        developed a model to predict whether the team would practice based on
+                        weather conditions. I found that a Random Forest classifier worked
+                        best to predict practice status, and that the features of Windspeed,
+                        Wind gusts, Wind direction, Visibility, Precipitation, and Storm Status
+                        were the most effective at predicting Practice Status, with
+                        an accuracy of 90.404 %.
+                    </p>
+
+
+            </div>
+        </div>
+
+    </div>
+    <!-- Footer -->
+    <footer class="py-5 header-footer">
+        <div class="container">
+            <p class="m-0 text-center text-white"><a style="color: white" href="mailto:susieriley@u.northwestern.edu"> susieriley@u.northwestern.edu</p>
+        </div>
+        <!-- /.container -->
+    </footer>
+<!-- scripts -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="script.js"></script> -->
+
+</body>
+</html>

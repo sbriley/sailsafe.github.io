@@ -1,0 +1,283 @@
+
+body {
+	font-family: Avenir, sans-serif;
+}
+
+a:visited { text-decoration: none; color:unset; }
+
+.main {
+	height: 100%;
+}
+
+#give-form {
+}
+
+.non-home {
+  height: 250px;
+}
+a:visited {
+	color:#4cd2ff;
+}
+.non-home img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    min-height: 250px;
+}
+
+.form p {
+	text-align: right;
+}
+
+.post-header {
+	margin: 0;
+	height: 50px;
+}
+
+.header-footer {
+	background-color: #4cd2ff;
+}
+
+.pagelinks {
+	color: #4cd2ff
+}
+
+h2 {
+	font-weight:normal
+}
+h4 {
+	font-weight: normal
+}
+
+.profpic {
+	width:100%;
+	padding: 5px;
+}
+
+.card-block {
+	padding: 5px;
+}
+
+.form {
+	background: white;
+	padding: 10px;
+	border-radius: 10px;
+}
+
+#navbar *{
+	display: inline-block;
+}
+
+#navbar {
+	height: 65px;
+	background-color: #4E2AB4;
+	margin-bottom: 25px;
+}
+
+#nav-wordmark {
+	text-decoration: none;
+	height: 85px;
+	padding-top: 2px;
+	margin-left: 10px;
+}
+
+#nav-logo {
+	height: 80px;
+}
+
+#nav-title {
+	font-size: 30px;
+	color: white;
+}
+
+#nav-pages {
+	padding-top: 15px;
+	width: 300px;
+	float: right;
+}
+
+
+#nav-pages a{
+	width: 50px;
+	margin-right: 10px;
+	text-align: center;
+	color: white;
+	font-size: 16px;
+}
+
+.post-content-container {
+	height: 80%;
+}
+
+.post-content-scroller {
+	padding-left: 1em;
+	padding-right: 1em;
+}
+
+.left-panel {
+	background:#f2f2f2;
+}
+.right-panel {
+	background: #f2f2f2;
+	overflow-y: scroll;
+}
+
+.middle-panel {
+	overflow-y:scroll;
+}
+
+.post-list {
+	list-style: none;
+}
+
+.post-list li {
+	color: black;
+	margin: 5px;
+}
+
+#welcome_block {
+	margin: 25px;
+	border: 3.5px solid #2f2343;
+	background-color: #9079b9;
+	color: white;
+	font-family: Avenir;
+}
+
+.content_block {
+	margin: 10px;
+	border: 5px solid black;
+	text-align: center;
+
+}
+
+.content_block_wrapper {
+	width: 95%;
+	margin: 0 auto;
+}
+
+.content_block_element {
+	/*display: inline-block;
+	height: 200px;
+	width: 200px;
+	margin: 17px;
+	border: 3.5px solid #2f2343;
+	background-color: #9079b9;*/
+
+	display: inline-block;
+	height: 200px;
+	width: 30%;
+	margin: 1%;
+	border: 3.5px solid #2f2343;
+	background-color: #9079b9;
+	vertical-align: top;
+}
+
+.content_block_name {
+	text-align: center;
+	font-size: 25pt;
+	color: white;
+	text-decoration: underline;
+}
+
+.content_block_name:hover {
+	color: #2f2343;
+}
+
+.content_block_description{
+	text-align: center;
+	font-size: 15pt;
+	color: white;
+
+}
+
+#about_us_block {
+	margin: 25px;
+	border: 3.5px solid #2f2343;
+	background-color: #9079b9;
+	color: white;
+	font-family: Avenir;
+}
+
+.resource_container {
+	width: 95%;
+	height: 55%;
+	border: 3.5px solid #2f2343;
+	margin: 1%;
+	margin-top: 2%;
+}
+
+.resource_title_text {
+	font-size: 19pt;
+	color: black;
+	text-decoration: underline;
+}
+
+.trending_news_element {
+	display: inline-block;
+	width: 30%;
+	height: 75%;
+	border: 2.0px solid #2f2343;
+	background-color: #ffffff;
+	margin: 8px;
+	vertical-align: top;
+}
+
+.trending_news_text{
+	text-align: center;
+	font-size: 18pt;
+	color: black;
+	margin: 4%;
+}
+
+.trending_news_title_text{
+	font-size: 14pt;
+	color: black;
+	text-align: center;
+	margin-top: 2%;
+}
+
+.trending_news_image{
+	width: 75%;
+	/*height: 150px;*/
+	/*margin-left: 12%;*/
+	/*margin-right: 15%;*/
+	/*margin-top: 5%;*/
+	display: inline-block;
+	border: 2px solid black;
+}
+
+/*.trending_news_image:hover{
+	border: 2.75px solid red;
+}*/
+
+.external_site_text {
+	font-size: 22pt;
+	text-decoration: none;
+}
+
+.spotlight_title_text {
+	font-size: 16pt;
+	margin-left: 10px;
+	color: black;
+	text-decoration: underline;
+}
+
+#event-spotlight{
+	color: white;
+	text-shadow: 2px 2px #000000;
+	margin: 50px 0;
+	border: 2px solid black;
+	padding: 5px;
+	background-image: url(images/maria.jpg);
+	background-size: cover;
+	height: 300px;
+}
+
+.spotlight_body_text {
+	margin-left: 18px;
+	font-size: 12pt;
+}
+
+.card-img-top{
+	height: 178px;
+}
